@@ -8,6 +8,7 @@ namespace TGS.Challenge.Tests
     public class FormatNumberTests
     {
         private readonly FormatNumber _formatNumber;
+        
         public FormatNumberTests()
         {
             this._formatNumber = new FormatNumber();
