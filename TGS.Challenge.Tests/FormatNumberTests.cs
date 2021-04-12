@@ -48,7 +48,7 @@ namespace TGS.Challenge.Tests
         }
 
         //Amend test to reflect the correct number as per the unit test description
-        //Amend AreEqual value to reflect the correct value as per the challenge 
+        //Amend AreEqual value to reflect the correct value as per the challenge parameters
         [Test()]
         public void Value_100_Returns_ValidString()
         {
@@ -118,6 +118,7 @@ namespace TGS.Challenge.Tests
         }
 
         //Amend test to reflect the correct number as per the unit test description
+        //Amend AreEqual value to reflect the correct value as per the challenge parameters
         [Test()]
         public void Value_35235235_Returns_ValidString()
         {

@@ -25,8 +25,8 @@ namespace TGS.Challenge
      */
     public class FormatNumber
     {
-        int minValue = 0;
-        int maxValue = 1000000000;
+        readonly int minValue = 0;
+        readonly int maxValue = 1000000000;
 
         public string Format(int value)
         {
@@ -35,11 +35,12 @@ namespace TGS.Challenge
                 throw new ArgumentOutOfRangeException("The value falls outside of the range: 0 <= n < 1000000000");
             }
 
+            //Add CultureInfo to the format number to force it to en-Us. (Force the comma after 3 digets.)
+            //Different machines will show diffrent outputs based on location. 
+            //You have to explicitly force it ot en-US to ensure local machine settings are not picked up and it is not changed to a . for instance
             string formatedValue = value.ToString("#,##0", new CultureInfo("en-US"));
 
             return formatedValue;
         }
-
-
     }
 }
