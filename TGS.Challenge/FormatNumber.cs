@@ -24,9 +24,19 @@ namespace TGS.Challenge
      */
     public class FormatNumber
     {
+        int minValue = 0;
+        int maxValue = 1000000000;
+
         public string Format(int value)
         {
-            return string.Empty;
+            if (value <= minValue || value > maxValue)
+            {
+                throw new ArgumentOutOfRangeException("The value falls outside of the range: 0 <= n < 1000000000");
+            }
+                      
+            return "";
         }
+
+
     }
 }
