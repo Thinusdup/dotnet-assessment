@@ -33,21 +33,21 @@ namespace TGS.Challenge.Tests
         //            Assert.IsTrue(result);
         //        }
 
-        //        [Test()]
-        //        public void Funeral_IsAnagram_Reel_fun()
-        //        {
-        //            var result = _anagram.AreAnagrams("Funeral", "Reel fun");
+        [Test()]
+        public void Funeral_IsAnagram_Reel_fun()
+        {
+            var result = _anagram.AreAnagrams("Funeral", "Reel fun");
 
-        //            Assert.IsTrue(result);
-        //        }
+            Assert.IsTrue(result);
+        }
 
-        //        [Test()]
-        //        public void School_master_IsAnagram_The_classroom()
-        //        {
-        //            var result = _anagram.AreAnagrams("School master?!", "!?The classroom");
+        [Test()]
+        public void School_master_IsAnagram_The_classroom()
+        {
+            var result = _anagram.AreAnagrams("School master?!", "!?The classroom");
 
-        //            Assert.IsTrue(result);
-        //        }
+            Assert.IsTrue(result);
+        }
 
         //        [Test()]
         //        public void Listen_Is_NOT_Anagram_Silence()
@@ -64,5 +64,5 @@ namespace TGS.Challenge.Tests
 
         //            Assert.IsTrue(result);
         //        }
-          }
+    }
     }

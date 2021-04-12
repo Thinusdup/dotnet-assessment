@@ -1,4 +1,5 @@
 using System;
+using System.Text.RegularExpressions;
 
 namespace TGS.Challenge
 {
@@ -31,7 +32,32 @@ namespace TGS.Challenge
                 throw new ArgumentException($"Neither string values can be null or empty to test a valid anagram");
             }
 
-            return false;
+            word1 = RemoveSpecialCharacters(word1);
+            word2 = RemoveSpecialCharacters(word2);
+
+            char[] ch1 = word1.ToLower().ToCharArray();
+            char[] ch2 = word2.ToLower().ToCharArray();
+            Array.Sort(ch1);
+            Array.Sort(ch2);
+            string val1 = new string(ch1);
+            string val2 = new string(ch2);
+
+            if (val1 == val2)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public static string RemoveSpecialCharacters(string input)
+        {
+            Regex r = new Regex(
+                          "(?:[^a-zA-Z0-9 ]|(?<=['\"])s)",
+                          RegexOptions.IgnoreCase | RegexOptions.CultureInvariant | RegexOptions.Compiled);
+            return r.Replace(input, String.Empty);
         }
     }
 }
