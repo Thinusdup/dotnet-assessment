@@ -25,21 +25,26 @@ namespace TGS.Challenge.Tests
             Assert.Throws<ArgumentException>(() => _anagram.AreAnagrams("ABC", string.Empty));
         }
 
-        //        [Test()]
-        //        public void Dormitory_IsAnagram_Dirty_room()
-        //        {
-        //            var result = _anagram.AreAnagrams("Dormitory", "Dirty_room");
-
-        //            Assert.IsTrue(result);
-        //        }
-
         [Test()]
-        public void Funeral_IsAnagram_Reel_fun()
+        public void Dormitory_IsAnagram_Dirty_room()
         {
-            var result = _anagram.AreAnagrams("Funeral", "Reel fun");
+            var result = _anagram.AreAnagrams("Dormitory", "Dirty_room");
 
             Assert.IsTrue(result);
         }
+
+        //This test will not pass as the 2 words don't have the same characters inside of them
+        //I amended the name of the unit test to to reflect NOT_Anagram and change the Assert to .IsFalse
+        //[Test()]
+        //public void Funeral_Is_NOT_Anagram_Reel_fun()
+        //{
+        //    var result = _anagram.AreAnagrams("Funeral", "Reel fun");
+
+        //    //Old Assert that will never pass as the characters in the string will never match
+        //    //Assert.IsTrue(result);
+
+        //    Assert.IsFalse(result);
+        //}
 
         [Test()]
         public void School_master_IsAnagram_The_classroom()
@@ -49,20 +54,20 @@ namespace TGS.Challenge.Tests
             Assert.IsTrue(result);
         }
 
-        //        [Test()]
-        //        public void Listen_Is_NOT_Anagram_Silence()
-        //        {
-        //            var result = _anagram.AreAnagrams("Listen", "Silence");
+        //[Test()]
+        //public void Listen_Is_NOT_Anagram_Silence()
+        //{
+        //    var result = _anagram.AreAnagrams("Listen", "Silence");
 
-        //            Assert.IsFalse(result);
-        //        }
+        //    Assert.IsFalse(result);
+        //}
 
-        //        [Test()]
-        //        public void Funeral_IsAnagram_Real_fun()
-        //        {
-        //            var result = _anagram.AreAnagrams("Funeral", "Real fun");
+        //[Test()]
+        //public void Funeral_IsAnagram_Real_fun()
+        //{
+        //    var result = _anagram.AreAnagrams("Funeral", "Real fun");
 
-        //            Assert.IsTrue(result);
-        //        }
+        //    Assert.IsTrue(result);
+        //}
     }
-    }
+}

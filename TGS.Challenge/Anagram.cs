@@ -27,7 +27,7 @@ namespace TGS.Challenge
     {
         public bool AreAnagrams(string word1, string word2)
         {
-            if (string.IsNullOrEmpty(word1)|| string.IsNullOrEmpty(word2))
+            if (string.IsNullOrEmpty(word1) || string.IsNullOrEmpty(word2))
             {
                 throw new ArgumentException($"Neither string values can be null or empty to test a valid anagram");
             }
@@ -37,6 +37,12 @@ namespace TGS.Challenge
 
             char[] ch1 = word1.ToLower().ToCharArray();
             char[] ch2 = word2.ToLower().ToCharArray();
+
+            if (ch1.Length != ch2.Length)
+            {
+                return false;
+            }
+
             Array.Sort(ch1);
             Array.Sort(ch2);
             string val1 = new string(ch1);
@@ -52,12 +58,10 @@ namespace TGS.Challenge
             }
         }
 
-        public static string RemoveSpecialCharacters(string input)
+        //Private Regex to replace empty string and special caracters in the string
+        private static string RemoveSpecialCharacters(string input)
         {
-            Regex r = new Regex(
-                          "(?:[^a-zA-Z0-9 ]|(?<=['\"])s)",
-                          RegexOptions.IgnoreCase | RegexOptions.CultureInvariant | RegexOptions.Compiled);
-            return r.Replace(input, String.Empty);
+            return Regex.Replace(input, @"[^A-Za-z]", string.Empty);
         }
     }
 }
