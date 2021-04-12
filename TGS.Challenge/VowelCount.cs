@@ -17,9 +17,6 @@ namespace TGS.Challenge
     {
         public int Count(string value)
         {
-            int total = 0;
-
-            //Check for empty string
             if (string.IsNullOrEmpty(value))
             {
                 throw new ArgumentException(string.Empty);
@@ -28,7 +25,7 @@ namespace TGS.Challenge
             // Build a list of vowels up front:
             var vowels = new HashSet<char> { 'a', 'e', 'i', 'o', 'u' };
 
-            //Lowercase the input string value
+            int total = 0;
             value = value.ToLower();
 
             for (int i = 0; i < value.Length; i++)
@@ -37,7 +34,7 @@ namespace TGS.Challenge
                 {
                     total++;
                 }
-            }         
+            }
             return total;
         }
     }
