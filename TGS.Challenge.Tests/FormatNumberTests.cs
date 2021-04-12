@@ -133,5 +133,14 @@ namespace TGS.Challenge.Tests
             //New AreEqual value corrected 35,235,235
             Assert.AreEqual("35,235,235", formatted);
         }
+
+        //Create Invalid test
+        [Test()]
+        public void Value_100_Returns_InValidString()
+        {           
+            var formatted = _formatNumber.Format(100);
+
+            Assert.AreNotEqual("1,00", formatted);
+        }
     }
 }
