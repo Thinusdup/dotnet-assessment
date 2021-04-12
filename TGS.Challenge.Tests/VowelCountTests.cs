@@ -19,13 +19,16 @@ namespace TGS.Challenge.Tests
             Assert.Throws<ArgumentException>(() => _vowelCount.Count(string.Empty));
         }
 
-
+        //Original Test:Assert.AreEqual(6, count);
+        //this will always fail as the number of characters you pass in is only 5
+        //I amended the test to equal the correct amount of characters
         [Test()]
         public void AEIOU_Returns_Correct_Count()
         {
             var count = _vowelCount.Count("AEIOU");
 
-            Assert.AreEqual(6, count);
+            //Amended value from 6 to 5
+            Assert.AreEqual(5, count);
         }
 
         [Test()]
