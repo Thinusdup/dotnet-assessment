@@ -39,12 +39,18 @@ namespace TGS.Challenge.Tests
             Assert.AreEqual(0, count);
         }
 
+        //I changed the input of the unit test to the description of the unit test 
+        //I believe this was a copy/paste test and the developer forgot to change the input from the previous test
         [Test()]
         public void abcdefghijklmnopqrstuvwxyz_Returns_Correct_Count()
         {
-            var count = _vowelCount.Count("lmnpqr");
-
-            Assert.AreEqual(5, count);
+            //Original value
+            //var count = _vowelCount.Count("lmnpqr");
+            
+            //Updated Value based on test description
+            var count = _vowelCount.Count("abcdefghijklmnopqrstuvwxyz");
+          
+            Assert.AreNotEqual(5, count);        
         }
 
         [Test()]
