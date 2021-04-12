@@ -23,20 +23,21 @@ namespace TGS.Challenge
             if (string.IsNullOrEmpty(value))
             {
                 throw new ArgumentException(string.Empty);
-
             }
 
             // Build a list of vowels up front:
             var vowels = new HashSet<char> { 'a', 'e', 'i', 'o', 'u' };
 
-            for (int i = 0; i < value.ToLower().Length; i++)
+            //Lowercase the input string value
+            value = value.ToLower();
+
+            for (int i = 0; i < value.Length; i++)
             {
                 if (vowels.Contains(value[i]))
                 {
                     total++;
                 }
-            }
-         
+            }         
             return total;
         }
     }
