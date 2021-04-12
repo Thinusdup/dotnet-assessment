@@ -46,21 +46,36 @@ namespace TGS.Challenge.Tests
             Assert.AreEqual("10", formatted);
         }
 
-        //[Test()]
-        //public void Value_100_Returns_ValidString()
-        //{
-        //    var formatted = _formatNumber.Format(1);
+        //Amend test to reflect the correct number as per the unit test description
+        //Amend AreEqual value to reflect the correct value as per the challenge 
+        [Test()]
+        public void Value_100_Returns_ValidString()
+        {
+            //Original test copy/past from previous test
+            //var formatted = _formatNumber.Format(1);
 
-        //    Assert.AreEqual("1,00", formatted);
-        //}
+            //Amended the value pass in to 100 as per test description
+            var formatted = _formatNumber.Format(100);
 
-        //[Test()]
-        //public void Value_1000_Returns_ValidString()
-        //{
-        //    var formatted = _formatNumber.Format(1);
+            //Original test nor correct AreEqual stipilated as per the challenge
+            //Assert.AreEqual("1,00", formatted);
 
-        //    Assert.AreEqual("1,000", formatted);
-        //}
+            //New AreEqual value 100
+            Assert.AreEqual("100", formatted);
+        }
+
+        //Amend test to reflect the correct number as per the unit test description
+        [Test()]
+        public void Value_1000_Returns_ValidString()
+        {
+            //Original test copy/past from previous test
+            //var formatted = _formatNumber.Format(1);
+
+            //Amended the value pass in to 1000 as per test description
+            var formatted = _formatNumber.Format(1000);
+
+            Assert.AreEqual("1,000", formatted);
+        }
 
         //[Test()]
         //public void Value_10000_Returns_ValidString()

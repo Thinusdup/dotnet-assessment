@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 namespace TGS.Challenge
 {
@@ -35,7 +36,7 @@ namespace TGS.Challenge
             }
 
 
-            string formatedValue = value.ToString("#,##0");
+            string formatedValue = value.ToString("#,##0", new CultureInfo("en-US"));
 
             return formatedValue;
         }
