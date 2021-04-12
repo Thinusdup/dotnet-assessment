@@ -50,7 +50,7 @@ namespace TGS.Challenge.Tests
             //Updated Value based on test description
             var count = _vowelCount.Count("abcdefghijklmnopqrstuvwxyz");
           
-            Assert.AreNotEqual(5, count);        
+            Assert.AreEqual(5, count);        
         }
 
         [Test()]
