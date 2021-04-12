@@ -18,6 +18,7 @@ namespace TGS.Challenge
         // Build a list of vowels up front
         public static HashSet<char> vowels = new HashSet<char> { 'a', 'e', 'i', 'o', 'u' };
 
+        //TODO: Test if rather then using for if foreach statement performance is not better
         public int Count(string value)
         {
             if (string.IsNullOrEmpty(value))

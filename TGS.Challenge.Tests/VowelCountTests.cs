@@ -31,6 +31,15 @@ namespace TGS.Challenge.Tests
             Assert.AreEqual(5, count);
         }
 
+        //Add Negitive test for AEIOU vowel count
+        [Test()]
+        public void AEIOU_Returns_NOT_Correct_Count()
+        {
+            var count = _vowelCount.Count("AEIOU");
+
+            Assert.AreNotEqual(6, count);
+        }
+
         [Test()]
         public void lmnpqr_Returns_Correct_Count()
         {
