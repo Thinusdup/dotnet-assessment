@@ -69,5 +69,14 @@ namespace TGS.Challenge.Tests
 
             Assert.AreEqual(6, count);
         }
+
+        //Add Integer test edge case
+        [Test()]
+        public void Integer_Returns_Correct_Count()
+        {
+            var count = _vowelCount.Count("12");
+
+            Assert.AreEqual(0, count);
+        }
     }
 }

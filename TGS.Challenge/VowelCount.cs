@@ -23,7 +23,7 @@ namespace TGS.Challenge
         {
             if (string.IsNullOrEmpty(value))
             {
-                throw new ArgumentException(string.Empty);
+                throw new ArgumentException("Please add a valid string value to count vowels");
             }
 
             int total = 0;
