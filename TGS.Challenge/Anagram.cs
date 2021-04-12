@@ -38,25 +38,21 @@ namespace TGS.Challenge
             char[] ch1 = word1.ToLower().ToCharArray();
             char[] ch2 = word2.ToLower().ToCharArray();
 
-            if (ch1.Length != ch2.Length)
-            {
-                return false;
-            }
+            if (ch1.Length != ch2.Length)            
+                return false;            
 
             Array.Sort(ch1);
             Array.Sort(ch2);
             string val1 = new string(ch1);
             string val2 = new string(ch2);
 
-            if (val1 == val2)
-            {
+            if (val1 == val2)            
                 return true;
-            }
-            else
-            {
-                return false;
-            }
+            
+            return false;
         }
+
+        //TODO: Explore to see if there is not a better way to remove white space and special caracters then using Regex(Performance!!)
 
         //Private Regex to replace empty string and special caracters in the string
         private static string RemoveSpecialCharacters(string input)
