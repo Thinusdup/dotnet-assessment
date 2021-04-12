@@ -15,15 +15,15 @@ namespace TGS.Challenge
      */
     public class VowelCount
     {
+        // Build a list of vowels up front
+        public static HashSet<char> vowels = new HashSet<char> { 'a', 'e', 'i', 'o', 'u' };
+
         public int Count(string value)
         {
             if (string.IsNullOrEmpty(value))
             {
                 throw new ArgumentException(string.Empty);
             }
-
-            // Build a list of vowels up front:
-            var vowels = new HashSet<char> { 'a', 'e', 'i', 'o', 'u' };
 
             int total = 0;
             value = value.ToLower();
