@@ -33,8 +33,11 @@ namespace TGS.Challenge
             {
                 throw new ArgumentOutOfRangeException("The value falls outside of the range: 0 <= n < 1000000000");
             }
-                      
-            return "";
+
+
+            string formatedValue = value.ToString("#,##0");
+
+            return formatedValue;
         }
 
 

@@ -25,13 +25,13 @@ namespace TGS.Challenge.Tests
             Assert.Throws<ArgumentOutOfRangeException>(() => _formatNumber.Format(1000000001));
         }
 
-        //[Test()]
-        //public void Value_1_Returns_ValidString()
-        //{
-        //    var formatted = _formatNumber.Format(1);
+        [Test()]
+        public void Value_1_Returns_ValidString()
+        {
+            var formatted = _formatNumber.Format(1);
 
-        //    Assert.AreEqual("1", formatted);
-        //}
+            Assert.AreEqual("1", formatted);
+        }
 
         //[Test()]
         //public void Value_10_Returns_ValidString()
