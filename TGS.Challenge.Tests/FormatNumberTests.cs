@@ -57,7 +57,7 @@ namespace TGS.Challenge.Tests
             //Amended the value pass in to 100 as per test description
             var formatted = _formatNumber.Format(100);
 
-            //Original test nor correct AreEqual stipilated as per the challenge
+            //Original test not correct AreEqual stipilated as per the challenge
             //Assert.AreEqual("1,00", formatted);
 
             //New AreEqual value 100
@@ -77,36 +77,60 @@ namespace TGS.Challenge.Tests
             Assert.AreEqual("1,000", formatted);
         }
 
-        //[Test()]
-        //public void Value_10000_Returns_ValidString()
-        //{
-        //    var formatted = _formatNumber.Format(1);
+        //Amend test to reflect the correct number as per the unit test description
+        [Test()]
+        public void Value_10000_Returns_ValidString()
+        {
+            //Original test copy/past from previous test
+            //var formatted = _formatNumber.Format(1);
 
-        //    Assert.AreEqual("10,000", formatted);
-        //}
+            //Amended the value pass in to 10000 as per test description
+            var formatted = _formatNumber.Format(10000);
 
-        //[Test()]
-        //public void Value_100000_Returns_ValidString()
-        //{
-        //    var formatted = _formatNumber.Format(1);
+            Assert.AreEqual("10,000", formatted);
+        }
 
-        //    Assert.AreEqual("100,000", formatted);
-        //}
+        //Amend test to reflect the correct number as per the unit test description
+        [Test()]
+        public void Value_100000_Returns_ValidString()
+        {
+            //Original test copy/past from previous test
+            //var formatted = _formatNumber.Format(1);
 
-        //[Test()]
-        //public void Value_1000000_Returns_ValidString()
-        //{
-        //    var formatted = _formatNumber.Format(1);
+            //Amended the value pass in to 100000 as per test description
+            var formatted = _formatNumber.Format(100000);
 
-        //    Assert.AreEqual("1,000,000", formatted);
-        //}
+            Assert.AreEqual("100,000", formatted);
+        }
 
-        //[Test()]
-        //public void Value_35235235_Returns_ValidString()
-        //{
-        //    var formatted = _formatNumber.Format(1);
+        //Amend test to reflect the correct number as per the unit test description
+        [Test()]
+        public void Value_1000000_Returns_ValidString()
+        {
+            //Original test copy/past from previous test
+            //var formatted = _formatNumber.Format(1);
 
-        //    Assert.AreEqual("35,2352,35", formatted);
-        //}
+            //Amended the value pass in to 1000000 as per test description
+            var formatted = _formatNumber.Format(1000000);
+
+            Assert.AreEqual("1,000,000", formatted);
+        }
+
+        //Amend test to reflect the correct number as per the unit test description
+        [Test()]
+        public void Value_35235235_Returns_ValidString()
+        {
+            //Original test copy/past from previous test
+            //var formatted = _formatNumber.Format(1);
+
+            //Amended the value pass in to 35235235 as per test description
+            var formatted = _formatNumber.Format(35235235);
+
+            //Original test not correct AreEqual stipilated as per the challenge
+            //Assert.AreEqual("35,2352,35", formatted);
+
+            //New AreEqual value corrected 35,235,235
+            Assert.AreEqual("35,235,235", formatted);
+        }
     }
 }

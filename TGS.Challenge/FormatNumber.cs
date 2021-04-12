@@ -35,7 +35,6 @@ namespace TGS.Challenge
                 throw new ArgumentOutOfRangeException("The value falls outside of the range: 0 <= n < 1000000000");
             }
 
-
             string formatedValue = value.ToString("#,##0", new CultureInfo("en-US"));
 
             return formatedValue;
