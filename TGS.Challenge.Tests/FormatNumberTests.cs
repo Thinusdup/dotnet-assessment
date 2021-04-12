@@ -33,13 +33,18 @@ namespace TGS.Challenge.Tests
             Assert.AreEqual("1", formatted);
         }
 
-        //[Test()]
-        //public void Value_10_Returns_ValidString()
-        //{
-        //    var formatted = _formatNumber.Format(1);
+        //Amend test to reflect the correct number as per the unit test description
+        [Test()]
+        public void Value_10_Returns_ValidString()
+        {
+            //Original test copy/past from previous test
+            //var formatted = _formatNumber.Format(1);
 
-        //    Assert.AreEqual("10", formatted);
-        //}
+            //Amended the value pass in to 10 as per test description
+            var formatted = _formatNumber.Format(10);
+
+            Assert.AreEqual("10", formatted);
+        }
 
         //[Test()]
         //public void Value_100_Returns_ValidString()
