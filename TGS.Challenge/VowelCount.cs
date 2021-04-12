@@ -19,6 +19,13 @@ namespace TGS.Challenge
         {
             int total = 0;
 
+            //Check for empty string
+            if (string.IsNullOrEmpty(value))
+            {
+                throw new ArgumentException(string.Empty);
+
+            }
+
             // Build a list of vowels up front:
             var vowels = new HashSet<char> { 'a', 'e', 'i', 'o', 'u' };
 
